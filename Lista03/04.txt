@@ -1,0 +1,6 @@
+4. O shellsort é uma ótima opção para arquivos de tamanho moderado e sua
+implementação é simples e requer uma quantidade de código pequena.
+(a) Verdadeira
+(b) Falsa
+
+Verdadeiro - letra a
