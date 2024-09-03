@@ -1,0 +1,10 @@
+O algoritmo Insertion Sort possui comportamento melhor do que o método da bolha
+(Bubblesort). Esta afirmação é:
+(a) Verdadeira
+(b) Falsa
+Justifique sua resposta:
+
+Letra A - Verdadeira
+
+O algoritmo Insertion Sort geralmente apresenta um desempenho melhor do que o Bubblesort, especialmente em casos onde a lista já está parcialmente ordenada.
+Embora ambos os algoritmos tenham complexidade de tempo 𝑂(𝑛2) no pior caso, o Insertion Sort faz menos trocas e comparações desnecessárias, o que o torna mais eficiente na prática.
