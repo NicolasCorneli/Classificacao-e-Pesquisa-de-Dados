@@ -1,0 +1,11 @@
+No Quicksort, a pior escolha para pivô é:*
+a) O extremo de uma lista já ordenada
+b) O elemento inicial da lista não ordenada
+c)O menor elemento da lista não ordenada
+d) O elemento que esteja no "meio" da lista já ordenada
+Justifique sua resposta:
+
+Letra A - O extremo de uma lista já ordenada
+
+Já que o Quicksort funciona dividindo a lista em sublistas, com base em um pivô, e repetindo o processo recursivamente,
+quando a lista já está ordenada e um dos extremos é escolhido como pivô, o algoritmo fará uma partição muito desigual: uma das sublistas terá quase todos os elementos, e a outra será muito pequena ou até vazia.
