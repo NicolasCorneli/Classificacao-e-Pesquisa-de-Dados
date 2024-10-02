@@ -27,3 +27,9 @@ def parsing(url):
                 produtos.append((nome_produto, valor_produto))
     
     return produtos
+
+def quicksort(produtos, inicio, final):
+    if inicio < final:
+        pivo_index = particionar(produtos, inicio, final)
+        quicksort(produtos, inicio, pivo_index - 1)
+        quicksort(produtos, pivo_index + 1, final)
