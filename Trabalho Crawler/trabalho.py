@@ -33,3 +33,21 @@ def quicksort(produtos, inicio, final):
         pivo_index = particionar(produtos, inicio, final)
         quicksort(produtos, inicio, pivo_index - 1)
         quicksort(produtos, pivo_index + 1, final)
+
+def particionar(produtos, inicio, final):
+    pivo = produtos[inicio][1] 
+    esq = inicio + 1
+    dir = final
+
+    while True:
+        while esq <= dir and produtos[esq][1] <= pivo:
+            esq += 1
+        while dir >= esq and produtos[dir][1] > pivo:
+            dir -= 1
+        if esq < dir:
+            produtos[esq], produtos[dir] = produtos[dir], produtos[esq]
+        else:
+            break
+
+    produtos[inicio], produtos[dir] = produtos[dir], produtos[inicio]
+    return dir
