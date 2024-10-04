@@ -51,3 +51,8 @@ def particionar(produtos, inicio, final):
 
     produtos[inicio], produtos[dir] = produtos[dir], produtos[inicio]
     return dir
+
+url = 'https://shoxstore.com.br/chuteiras/chuteira-de-campo'
+
+produtos = parsing(url)
+
