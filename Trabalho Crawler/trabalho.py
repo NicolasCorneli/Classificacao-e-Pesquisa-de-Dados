@@ -57,3 +57,6 @@ url = 'https://shoxstore.com.br/chuteiras/chuteira-de-campo'
 produtos = parsing(url)
 
 quicksort(produtos, 0, len(produtos) - 1)
+
+for produto in produtos:
+    print(f'Produto: {produto[0]} - Valor: R$ {produto[1]:.2f}')
