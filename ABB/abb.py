@@ -41,13 +41,11 @@ class BinarySearchTree:
         elif key > node.key:
             node.right = self._delete(node.right, key)
         else:
-            # Node with only one child or no child
             if node.left is None:
                 return node.right
             elif node.right is None:
                 return node.left
-
-            # Node with two children: Get the inorder successor
+                
             temp = self._min_value_node(node.right)
             node.key = temp.key
             node.right = self._delete(node.right, temp.key)
@@ -89,4 +87,26 @@ class BinarySearchTree:
             self._postorder(node.left)
             self._postorder(node.right)
             print(node.key, end=" ")
+
+
+bst = BinarySearchTree()
+
+valores_para_inserir = [50, 30, 70, 20, 40, 60, 80]
+for valor in valores_para_inserir:
+    bst.insert(valor)
+
+print("Percurso em pré-ordem:")
+bst.preorder() 
+
+print("Percurso em in-ordem:")
+bst.inorder()  
+
+print("Percurso em pós-ordem:")
+bst.postorder()
+
+bst.delete(70) 
+
+
+print("Percurso em in-ordem após deleção do valor 70:")
+bst.inorder() 
 
