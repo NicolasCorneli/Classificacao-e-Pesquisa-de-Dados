@@ -1,0 +1,24 @@
+1. Árvore Rubro-Negra (Red-Black Tree)
+Descrição: A Árvore Rubro-Negra é uma árvore binária balanceada, onde cada nó é colorido como vermelho ou preto. Ela garante que o caminho mais longo da raiz até uma folha é, no máximo, o dobro do caminho mais curto.
+
+Para que serve: Utilizada em situações onde há necessidade de manter dados ordenados para busca rápida, como em tabelas de símbolos e em várias estruturas de dados dos sistemas operacionais.
+
+Funcionamento: A Árvore Rubro-Negra aplica rotações e recolorimentos de nós ao inserir ou excluir elementos, mantendo as propriedades da árvore:
+
+Cada nó é vermelho ou preto.
+A raiz é preta.
+Nós vermelhos não podem ter filhos vermelhos.
+Todo caminho da raiz até uma folha nula tem o mesmo número de nós pretos.
+2. Árvore B (B-tree)
+Descrição: A Árvore B é uma árvore balanceada de ordem 𝑚 onde cada nó pode ter até 𝑚 filhos e conter até 𝑚 − 1 chaves. Ela é amplamente usada em sistemas de banco de dados e sistemas de arquivos.
+
+Para que serve: Ideal para dispositivos de armazenamento em disco onde a leitura e escrita de grandes blocos de dados é mais eficiente, como em bancos de dados e sistemas de arquivos.
+
+Funcionamento: Na Árvore B, os nós contêm múltiplas chaves e são projetados para minimizar o número de acessos a disco. Ao inserir ou excluir chaves, a árvore se reorganiza dividindo ou fundindo nós, mantendo suas propriedades de balanceamento.
+
+3. Árvore B+ (B+ tree)
+Descrição: A Árvore B+ é uma variação da Árvore B, onde os dados reais são armazenados apenas nas folhas, e os nós internos servem apenas como índices para facilitar a busca.
+
+Para que serve: Muito utilizada em bancos de dados e sistemas de arquivos devido à sua estrutura otimizada para buscas rápidas, especialmente em cenários onde a navegação sequencial é frequente.
+
+Funcionamento: Como na Árvore B, as chaves nos nós internos são usadas para navegação. No entanto, as folhas da árvore B+ estão ligadas entre si, facilitando a busca sequencial e a varredura dos dados.
