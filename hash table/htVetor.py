@@ -21,11 +21,10 @@ class HashTableVetor:
         index = self._hash(key)
         self.table[index] = [(k, v) for k, v in self.table[index] if k != key]
 
-# Exemplo de uso
 htable = HashTableVetor(5)
 htable.insert("chave1", "valor1")
 htable.insert("chave2", "valor2")
 htable.insert("chave3", "valor3")
-print(htable.search("chave2"))  # Saída: valor2
+print(htable.search("chave2")) 
 htable.delete("chave2")
-print(htable.search("chave2"))  # Saída: None
+print(htable.search("chave2"))  
