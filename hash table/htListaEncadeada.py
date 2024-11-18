@@ -52,9 +52,9 @@ class HashTableLinkedLists:
             node = node.next
 
 htable = HashTableLinkedLists(5)
-htable.insert("chave1", "valor1")
-htable.insert("chave2", "valor2")
-htable.insert("chave3", "valor3")
-print(htable.search("chave2"))  
-htable.delete("chave2")
-print(htable.search("chave2")) 
+htable.insert(1, 6)
+htable.insert(2, 33)
+htable.insert(3, 55)
+print(htable.search(2))  
+htable.delete(2)
+print(htable.search(2)) 
