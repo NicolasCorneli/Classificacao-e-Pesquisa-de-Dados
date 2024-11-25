@@ -60,7 +60,7 @@ class ArvoreJogos:
         if jogos_encontrados:
             print(f"Jogos encontrados com o preço de R${preco}:")
             for j in jogos_encontrados:
-            print(f"Jogo: {j.titulo}, Preço: R${j.preco}")
+                print(f"Jogo: {j.titulo}, Preço: R${j.preco}")
         else:
             print(f"Nenhum jogo encontrado com o preço de R${preco}.")
     
