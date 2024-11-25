@@ -72,3 +72,6 @@ motor.buscar_jogo_por_faixa_preco(100, 200)
 
 # Buscando por gênero
 motor.buscar_jogo_por_genero("RPG")
+```
+
+## ✨Dupla --> Nicolas Marin e Bruno Carneiro
