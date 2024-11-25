@@ -99,16 +99,32 @@ class HashGeneros:
     def __init__(self):
         self.genero_jogos = {}
 
-    def adicionar_jogo(self,jogo):
+    def tabelahash(self, chave):
+        hash_val = 0
+        for char in chave:
+            hash_val += ord(char)
+
+        return hash_val  
+
+    def adicionar_jogo(self, jogo):
         for g in jogo.generos:
-            if g not in self.genero_jogos:
-                self.genero_jogos[g] = []
-            
-            self.genero_jogos[g].append(jogo.titulo)
-        
-    
-    def buscar_jogo_por_genero(self,genero):
-        return self.genero_jogos.get(genero, [])
+            chave = self.tabelahash(g)
+
+            if chave not in self.genero_jogos:
+                self.genero_jogos[chave] = []
+
+            self.genero_jogos[chave].append(jogo.titulo)
+
+    def buscar_jogo_por_genero(self, genero):
+        chave = self.tabelahash(genero)
+
+        if chave in self.genero_jogos:
+            jogos = self.genero_jogos[chave]
+            print(f"Jogos encontrados no gênero '{genero}':")
+            for jogo in jogos:
+                print(f"Jogo: {jogo}")
+        else:
+            print(f"Nenhum jogo encontrado para o gênero '{genero}'.")
     
 class MotorBuscaJogos:
     def __init__(self):
