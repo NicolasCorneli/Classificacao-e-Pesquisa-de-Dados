@@ -36,23 +36,38 @@ class ArvoreJogos:
                     else:
                         atual = atual.right
 
-    def buscar_por_preco(self,preco):
-        if self.arv is None:
-            print("Sem jogos disponíveis")
-            return None
-        
-        atual = self.arv
-        while atual:
-            if preco < atual.jogo.preco:
-                    atual = atual.left
-            elif preco > atual.jogo.preco:
-                    atual = atual.right
-            else:
-                print(f"Jogo encontrado: {atual.jogo.titulo}, Preço: R${atual.jogo.preco}")
-                return atual.jogo
-            
-        print("Jogos com esse preço não encontrados.")
+    def buscar_por_preco(self, preco):
+    if self.arv is None:
+        print("Sem jogos disponíveis.")
         return None
+    
+    jogos_encontrados = []
+    
+    def percorrer_arvore(atual):
+        if atual is None:
+            return
+        
+        # Se o preço do jogo for igual ao procurado, adicionamos à lista
+        if atual.jogo.preco == preco:
+            jogos_encontrados.append(atual.jogo)
+        
+        # Continuamos a busca tanto para a esquerda quanto para a direita
+        if preco <= atual.jogo.preco:
+            percorrer_arvore(atual.left)
+        if preco >= atual.jogo.preco:
+            percorrer_arvore(atual.right)
+    
+    percorrer_arvore(self.arv)
+    
+    if jogos_encontrados:
+        print(f"Jogos encontrados com o preço de R${preco}:")
+        for j in jogos_encontrados:
+            print(f"Jogo: {j.titulo}, Preço: R${j.preco}")
+    else:
+        print(f"Nenhum jogo encontrado com o preço de R${preco}.")
+    
+    return jogos_encontrados if jogos_encontrados else None
+
     
     def buscar_por_faixa_preco(self, preco_min, preco_max):
         if self.arv is None:
