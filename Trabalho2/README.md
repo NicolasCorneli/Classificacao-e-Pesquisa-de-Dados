@@ -1,6 +1,13 @@
-# mini-Steam: Algoritmo Localizador de Jogos
+# 🎮 mini-Steam: Algoritmo Localizador de Jogos
 
 Este projeto é um mecanismo de busca para uma loja digital de jogos chamado **mini-Steam**. Ele permite localizar jogos com base no preço e no gênero de forma eficiente, utilizando estruturas de dados como **Árvore Binária de Busca (BST)** e **Hash Table**.
+
+## 📚 Tecnologias e Estruturas Utilizadas
+
+  - Linguagem: Python
+  - Estruturas de Dados:
+  - Árvore Binária de Busca (BST)
+  - Hash Table
 
 ## 🛠️ Funcionalidades
 
