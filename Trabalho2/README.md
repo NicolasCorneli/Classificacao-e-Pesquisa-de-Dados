@@ -5,7 +5,6 @@ Este projeto é um mecanismo de busca para uma loja digital de jogos chamado **m
 ## 📚 Tecnologias e Estruturas Utilizadas
 
   - Linguagem: Python
-  - Estruturas de Dados:
   - Árvore Binária de Busca (BST)
   - Hash Table
 
